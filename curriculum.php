@@ -14,7 +14,7 @@
         $idioma = "ca"
         $estudios = "estudios_" . $idioma;
 
-        echo($$estudios);
+        echo $$estudios;
 
     ?>
 </body>
