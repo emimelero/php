@@ -7,8 +7,14 @@
 </head>
 <body>
     <?php
-        
+        $estudios_ca = "Mis estudios son la ESO, el Bachillerato y Ciclo superior de DAW";
+        $estudios_en = "My studies are the High school and DAW Vocational Training";
+        $estudios_va = "Els meus estudis son la ESO, el Batxillerat y un Grau Suprior de DAW";
 
+        $idioma = "ca"
+        $estudios = "estudios_" . $idioma;
+
+        echo($$estudios);
 
     ?>
 </body>
