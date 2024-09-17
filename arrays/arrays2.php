@@ -8,16 +8,33 @@
 <body>
     <?php
     $array=[];
-
+    $contador = array('M' => 0, 'F' => 0);
     for($i = 0; $i<100;$i++){
         $array[$i] = rand(0,1);
         if($array[$i] == 0){
             $array[$i] = "M";
-        }else $array[$i] = "F"; 
+        }else{
+            $array[$i] = "F";
+        } 
         
     }
 
+    for ($i = 0; $i < count($array);$i++){
+        if($array[$i] == "M"){
+            $contador['M']++;
+        }else{
+            $contador['F']++;
+        } 
+    }
+
+
+
+    
+
     print_r($array);
+    echo '<br>';
+    echo '<br>';
+    print_r($contador);
     ?>
 </body>
 </html>

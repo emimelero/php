@@ -12,9 +12,15 @@
     for($i = 0; $i<50;$i++){
         $array[$i] = rand(0,99);
     }
-
+    sort($array);
     print_r($array);
     echo array_sum($array)/count($array);
+    
+    echo "<br>";
+    echo $array[0];
+    echo "<br>";
+    echo $array[49];
+
     ?>
 </body>
 </html>
