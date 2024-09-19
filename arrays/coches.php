@@ -8,13 +8,29 @@
 <body>
     <?php
     $coches = array(
-        "1111abc" => array("ford","fiesta", 1);
-        "2222abc" => array("ford","fiesta", 2);
-        "3333abc" => array("ford","fiesta", 3);
-        "4444abc" => array("ford","fiesta", 4);
+        "1111abc" => array("ford","fiesta", 2),
+        "2222abc" => array("renault","uno", 2),
+        "3333abc" => array("honda","civic", 5),
+        "4444abc" => array("kia","niro", 4)
     );
 
-    foreach()
+    ksort($coches);
+
+    echo "<h1>Listado de Coches</h1>";
+    echo "<table border='1'>";
+    echo "<tr><th>Matrícula</th><th>Marca</th><th>Modelo</th><th>Número de Puertas</th></tr>";
+
+// Recorremos el array y mostramos los datos en una tabla
+    foreach ($coches as $matricula => $datos) {
+        echo "<tr>";
+        echo "<td>{$matricula}</td>";
+        echo "<td>{$datos[0]}</td>";
+        echo "<td>{$datos[1]}</td>";
+        echo "<td>{$datos[2]}</td>";
+        echo "</tr>";
+    }
+
+    echo "</table>";
     ?>
 </body>
 </html>
