@@ -8,54 +8,59 @@
     <style>
         body{
             background-color: beige;
+            width: 50%;
+            margin: auto;
+            border-radius: 5px;
+            border:solid black 2px;
         }
-        div{
-            width: 40%;
+        label{
+            margin-top: 0;
         }
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <form action="formulario.php" method="post">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
+        <form action="formulario.php" method="post" class="row g-2">
+            
+            <div class="col-md-6">
+                Nombre:
                 <input type="text" class="form-control" id="nombre" name="nombre">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="apellido" class="form-label">Apellido:</label>
                 <input type="text" class="form-control" id="apellido" name="apellido">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" name="email">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="url" class="form-label">URL página personal:</label>
                 <input type="text" class="form-control" id="url" name="url">
             </div>
 
-            <div class="mb-3">
-                <label class="form-label">Sexo:</label> <br>
+            <div class="col-md-6">
+                Sexo:
                 <div class="form-check">
                     <input class="form-check-input" type="radio" id="hombre" name="sexo" value="hombre">
-                    <label class="form-check-label" for="hombre">Hombre</label>
+                    Hombre
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" id="mujer" name="sexo" value="mujer">
-                    <label class="form-check-label" for="mujer">Mujer</label>
+                    Mujer
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label for="convivientes" class="form-label">Número de convivientes:</label>
+            <div class="col-md-6">
+                Número de convivientes:
                 <input type="number" class="form-control" id="convivientes" name="convivientes">
             </div>
 
-            <div class="mb-3">
-                <label class="form-label">Aficiones:</label>
+            <div class="col-md-6">
+                Aficiones:
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="deporte" name="aficiones[]" value="deporte">
                     <label class="form-check-label" for="deporte">Hacer deporte</label>
@@ -74,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <label for="menu" class="form-label">Menú Favorito:</label>
                 <select class="form-select" id="menu" name="menu[]" multiple>
                     <option value="paella">Paella</option>
@@ -85,7 +90,7 @@
                 </select>
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6">
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
         </form>
