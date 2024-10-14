@@ -20,7 +20,7 @@
         $votos_fin = array_combine($partidos,$cont_votos);
 
         rsort($cont);
-        $numeros_may = array_slice($cont,0,7);
+        $numeros_may = array_slice($cont,0,$escanos);
 
         include("hont.view.php");
 
