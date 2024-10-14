@@ -16,7 +16,7 @@
         }
         table {
             border-collapse: collapse;
-            width: 80%;
+            width: 100%;
             margin: 20px auto;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@
         th, td {
             border: 1px solid #dddddd;
             text-align: center;
-            padding: 8px;
+            padding: 20px;
         }
         th {
             background-color: blue;
@@ -44,7 +44,7 @@
 </head>
 <body>
     <div>
-        <h1>Distribución de escaños (Método D'Hondt)</h1>
+        <h1>Distribución de escaños (Método Hont)</h1>
         <?php
         $votos = [500000, 300000, 150000, 50000];
         $escanos = 7;
