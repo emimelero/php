@@ -60,18 +60,21 @@
         rsort($numeros_may);
         $numeros_may = array_slice($numeros_may, 0, 7);
 
-        // Crear la tabla
+        // Crear la tabla transpuesta
         echo "<table>";
-        echo "<tr><th></th>";
-        for($i = 1; $i <= $escanos; $i++) {
-            echo "<th>Escaño $i</th>";
+        
+        // Primera fila: los partidos
+        echo "<tr><th>Escaños</th>";
+        for($i = 0; $i < count($partidos); $i++) {
+            echo "<th>{$partidos[$i]}</th>";
         }
         echo "</tr>";
 
-        for($i = 0; $i < count($votos); $i++) {
+        // Filas de escaños
+        for($j = 1; $j <= $escanos; $j++) {
             echo "<tr>";
-            echo "<td>{$partidos[$i]}</td>";
-            for($j = 1; $j <= $escanos; $j++) {
+            echo "<td>Escaño $j</td>";
+            for($i = 0; $i < count($votos); $i++) {
                 $new_num = round($votos[$i] / $j, 1);
                 if (in_array($new_num, $numeros_may)) {
                     echo "<td style='background-color: yellow;'>{$new_num}</td>";
@@ -83,6 +86,7 @@
             }
             echo "</tr>";
         }
+        
         echo "</table>";
         ?>
     </div>
