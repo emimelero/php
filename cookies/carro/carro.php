@@ -32,8 +32,10 @@
 
     if (isset($_GET['limpiar']) && $_GET['limpiar'] == 'true'){
         unset($_SESSION['Carro']);
+        session_destroy();
         $preciototal = 0;
     }
 
+    include('carro.view.php')
 
 ?>
