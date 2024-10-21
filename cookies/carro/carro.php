@@ -9,14 +9,31 @@
         => 20)
     );
 
+    session_start();
+
+    
+
+    if(isset($_GET["id"])){
+        $id_art = $_GET["id"];
+        foreach($articulos as $articulo){
+            if($articulo['id']==$id_art){
+                $_SESSION['Carro'][] = $articulo;
+                break;
+            }
+        }
+    }
     $preciototal = 0;
 
-    echo "<h2>Lista de articulos:</h2>";
+    if(isset($_SESSION['Carro'])){
+        foreach($_SESSION['Carro'] as $precioart){
+            $preciototal += $precioart['precio'];
+        }
+    }
 
-    echo "<a id='1' href='#' style='text-decoration:none;'>Zapatillas Nike</a><br>
-          <a id='2' href='#' style='text-decoration:none;'>Sudadera Domyos</a><br>
-          <a id='3' href='#' style='text-decoration:none;'>Pala de pádel Vairo</a><br>
-          <a id='4' href='#' style='text-decoration:none;'>Pelota de baloncesto Molten</a><br><br>";
+    if (isset($_GET['limpiar']) && $_GET['limpiar'] == 'true'){
+        unset($_SESSION['Carro']);
+        $preciototal = 0;
+    }
 
-    echo "Precio total: " . $preciototal;
+
 ?>
