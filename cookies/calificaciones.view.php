@@ -36,7 +36,6 @@
             echo "</table>";
             echo "<a href='calificaciones.php?borrar=true'>Borrar Lista</a>";
         }
-    
-    ?>
+?>
 </body>
 </html>
