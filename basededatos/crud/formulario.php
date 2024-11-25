@@ -20,14 +20,14 @@ include_once("header.php");
       $descripcion=$registro['descripcion']; 
         echo "<div class='row'><form action='editar.php' method='post'>";
 
-        echo "<div class='col-md-6'><label>title:</label>";
+        echo "<div class='col-md-6'><label>Titulo:</label>";
         echo "  <input type='text' name='title' id='title' class='form-control' maxlength='100' value=$titol ></div>";
 
-        echo "<div class='col-md-6'><label>descripcion:</label>";
+        echo "<div class='col-md-6'><label>Descripcion:</label>";
         echo "  <input type='text' name='descripcion' id='descripcion' class='form-control' maxlength='100' value=$descripcion ></div>";
 
         echo "  <input type='hidden' name='id' id='id' class='form-control' maxlength='100' value=$id >";
-        echo " <div class='col-md-12 pull-right'><hr><button type='submit' class='btn btn-success'>Guardar datos</button></div></form></div>";
+        echo " <div class='col-md-12 pull-right'><hr><button type='submit' class='btn btn-info'>Guardar datos</button></div></form></div>";
 
 
     
