@@ -2,7 +2,7 @@
 include_once("header.php");
 ?>
                 <div class="row">
-                    <div class="col-sm-8"><h2>Listado de Reseñas</h2></div>
+                    <div class="col-sm-8"><h2>Listado de Tareas</h2></div>
 
                 </div>
             </div>
@@ -22,8 +22,9 @@ include_once("header.php");
       $titol=$registro['title'];
     
     echo "<tr><td>".$registro['title']."</td><td>".$registro['descripcion']."</td><td>".$registro['created_at'].
-    "</td><td><a href=borrar.php?id=".$registro['id']."><img src='borrado1.svg' width='32' height='32'></a>".
-    "<a href=formulario.php?id=".$registro['id']."><img src='modificar.svg' width='32' height='32'></a></td>".
+    "</td><td>"."<a href=formulario.php?id=".$registro['id']."><img src='modificar.svg' width='32' height='32'></a>
+    <a href=borrar.php?id=".$registro['id']."><img src='borrado1.svg' width='32' height='32'></a>
+    </td>".
     "</tr>";
     }
   echo "</tbody></table>";

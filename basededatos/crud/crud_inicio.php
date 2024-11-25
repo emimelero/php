@@ -2,7 +2,9 @@
 include_once("header.php");
 ?>
    <div class="row">
-                    <div class="col-sm-8"><h2>RESEÑAS DE LIBROS RECIENTES</h2></div>
+                    
+					<div class="col-sm-8"><h2>Bienvenido, <b><?php echo $_REQUEST["nombre"];?> </b></h2></div>
+					<div class="col-sm-8"><h2>Listado de Tareas</h2></div>
 
                 </div>
             </div>
