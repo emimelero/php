@@ -2,7 +2,7 @@
 include_once("header.php");
 ?>
                 <div class="row">
-                    <div class="col-sm-8"><h2>Modificar <b>Reseña</b></h2></div>
+                    <div class="col-sm-8"><h2>Modificar <b>Tarea</b></h2></div>
 
                 </div>
             </div>
@@ -17,7 +17,8 @@ include_once("header.php");
   $registro = $consulta->fetch();
       $id=$registro['id'];
       $titol=$registro['title'];
-      $descripcion=$registro['descripcion']; 
+      $descripcion=$registro['descripcion'];
+      $imagen=$registro['imagen'];
         echo "<div class='row'><form action='editar.php' method='post'>";
 
         echo "<div class='col-md-6'><label>Titulo:</label>";
@@ -26,8 +27,14 @@ include_once("header.php");
         echo "<div class='col-md-6'><label>Descripcion:</label>";
         echo "  <input type='text' name='descripcion' id='descripcion' class='form-control' maxlength='100' value=$descripcion ></div>";
 
+        echo "<div class='col-md-6'><label>Imagen:</label>";
+        echo " <input type='url' name='imagen' id='imagen' class='form-control' value=$imagen ></div>";
+
         echo "  <input type='hidden' name='id' id='id' class='form-control' maxlength='100' value=$id >";
         echo " <div class='col-md-12 pull-right'><hr><button type='submit' class='btn btn-info'>Guardar datos</button></div></form></div>";
+
+
+        echo "<img src=$imagen heigth=350px, width=350px>";
 
 
     

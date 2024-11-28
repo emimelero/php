@@ -3,11 +3,13 @@
 require_once "conecta.php";
 $pdo=conectaDb();
 
-$insercion = $pdo->prepare("update task set title=:title, descripcion=:descripcion, created_at=:created_at where id=:id");
+$insercion = $pdo->prepare("update task set title=:title, descripcion=:descripcion, imagen=:imagen, created_at=:created_at where id=:id");
 $insercion->bindParam(':id', $_REQUEST['id']);
 $insercion->bindParam(':title', $_REQUEST['title']);
 $insercion->bindParam(':descripcion', $_REQUEST['descripcion']);
+$insercion->bindParam(':imagen', $_REQUEST['imagen']);
 $insercion->bindParam(':created_at', $_REQUEST['created_at']);
+
 
 
 

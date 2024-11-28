@@ -1,10 +1,16 @@
 <?php
+session_start();
+if(!isset($_SESSION['nombre'])){
+	header("Location: login.php");
+	exit;
+}
+$usuario=$_SESSION['nombre'];
 include_once("header.php");
 ?>
    <div class="row">
-   					<a href="login.php" style="position:absolute; right:10px; top:5px;"><img src='power-svgrepo-com.svg' width='32' height='32'></a>
+   					<a href="logout.php" style="position:absolute; right:10px; top:5px;"><img src='power-svgrepo-com.svg' width='32' height='32'></a>
                     
-					<div class="col-sm-8"><h2>Bienvenido, <b><?php echo $_REQUEST["nombre"];?> </b></h2></div>
+					<div class="col-sm-8"><h2>Bienvenido, <b><?php echo $usuario;?> </b></h2></div>
 					<div class="col-sm-8"><h2>Listado de Tareas</h2></div>
 
                 </div>

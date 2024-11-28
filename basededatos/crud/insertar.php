@@ -10,9 +10,10 @@
 
 
 
-    $insercion = $pdo->prepare("INSERT INTO task(title, descripcion,created_at) VALUES(:title, :descripcion, :created_at)");
+    $insercion = $pdo->prepare("INSERT INTO task(title, descripcion,imagen,created_at) VALUES(:title, :descripcion,:imagen, :created_at)");
                  $insercion->bindParam(':title', $_REQUEST['title']);
                  $insercion->bindParam(':descripcion', $_REQUEST['descripcion']);
+                 $insercion->bindParam(':imagen', $_REQUEST['imagen']);
                  $insercion->bindParam(':created_at', $_REQUEST['created_at']);
              
 

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $nombre = $_POST["nombre"];
     $password = $_POST["password"];
     $usuarios = [
@@ -11,6 +12,7 @@
     $estaBien = false;
     foreach($usuarios as $usu){
         if($usu["nombre"] === $nombre && $usu["password"] === $password){
+            $_SESSION['nombre']=$usu['nombre'];
             $estaBien=true;
             return include "crud_inicio.php";
         }
