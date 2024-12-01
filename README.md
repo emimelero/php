@@ -4,4 +4,4 @@
 
 ## EJERCICIOS DE INICIACIÓN
 
-* En esta primera sección tenemos las primeras prácticas que      hemos realizado en el lenguaje de php
+* Esto es una prueba para ver si funcionan los commit
