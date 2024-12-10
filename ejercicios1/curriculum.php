@@ -11,7 +11,7 @@
         $estudios_en = "My studies are the High school and DAW Vocational Training";
         $estudios_va = "Els meus estudis son la ESO, el Batxillerat y un Grau Suprior de DAW";
 
-        $idioma = "ca";
+        $idioma = "en";
         $estudios = "estudios_" . $idioma;
 
         echo $$estudios;
